@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Test DigitalKhatt CM Text with weight, width and slant controls.">
+  <meta name="color-scheme" content="light">
+  <title>DigitalKhatt CM Text — Font test</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="characters.js" defer></script>
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>DigitalKhatt CM Text</h1>
+      <p class="explanation">Variable text font based on Computer Modern. Weight 200–750, width 80–125, slant −14.04°–0°.</p>
+      <div class="header-links">
+        <p><a href="https://github.com/DigitalKhatt/digitalkhatt-cm">GitHub repository</a></p>
+        <p>Download version 0.1.0: <a href="fonts/DigitalKhattCMText-VF.ttf" download>TTF</a> · <a href="fonts/DigitalKhattCMText-VF.woff2" download>WOFF2</a></p>
+      </div>
+    </header>
+
+    <section id="playground" aria-labelledby="playground-title">
+      <div class="section-heading"><h2 id="playground-title">Test text</h2><p id="font-status" role="status">Loading font…</p></div>
+      <div class="playground-panel">
+        <div class="controls">
+          <label for="wght">Weight <output id="wght-value" for="wght">400</output><input id="wght" type="range" min="200" max="750" step="1" value="400"></label>
+          <label for="wdth">Width <output id="wdth-value" for="wdth">100</output><input id="wdth" type="range" min="80" max="125" step="0.5" value="100"></label>
+          <label for="slnt">Slant <output id="slnt-value" for="slnt">0°</output><input id="slnt" type="range" min="-14.036239624023438" max="0" step="any" value="0"></label>
+          <label for="size">Size <output id="size-value" for="size">43 px</output><input id="size" type="range" min="16" max="120" step="1" value="43"></label>
+        </div>
+        <div class="preset-bar"><div class="presets" role="group" aria-label="Font presets"><button type="button" data-preset="roman" aria-pressed="true">Regular</button><button type="button" data-preset="bold" aria-pressed="false">Bold</button><button type="button" data-preset="extended" aria-pressed="false">Bold extended</button><button type="button" data-preset="slanted" aria-pressed="false">Slanted</button><button type="button" data-preset="heavy" aria-pressed="false">Weight 750</button></div><button id="reset" type="button">Reset</button></div>
+        <label class="sr-only" for="preview">Sample text</label>
+        <textarea class="live-font" id="preview" rows="5" spellcheck="false">The quick brown fox jumps over the lazy dog.
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+0123456789  office affine shuffle
+ÀÁÂÃÄÅ ÇĆĉ ÈÉÊË Ññ Öö ŗŞşŢţ Ŵŷ</textarea>
+        <div class="preview-footer"><span id="axis-summary">wght 400 · wdth 100 · slnt 0</span><label><input type="checkbox" id="ligatures" checked> Ligatures</label></div>
+      </div>
+      <p class="small-note" id="coverage-status" role="status">Edit the text above. Axis controls also apply to the samples and character grid below.</p>
+    </section>
+
+    <section aria-labelledby="samples-title">
+      <h2 id="samples-title">Samples</h2>
+      <div class="samples">
+        <article><h3>Text</h3><p class="reading-copy live-font">This is a sample paragraph for checking letter shapes, spacing and line breaks.</p></article>
+        <article><h3>Accents and combining marks</h3><p class="accent-sample live-font">ÀÁÂÃÄÅ ÇĆĈČ ÈÉÊË<br>ŇÑ ŐÖ Řř ŗ Şş Ţţ<br>Ŵŵ Ŷŷ Źź Æ Œ Ø ß<br>Ǻ ǘ ģ́</p></article>
+        <article><h3>Ligatures and spacing</h3><p class="ligature-sample live-font">ff fi fl ffi ffl<br>office affine shuffle<br>AV To Wa pqr</p></article>
+      </div>
+    </section>
+
+    <section id="characters" aria-labelledby="characters-title">
+      <h2 id="characters-title">Supported characters</h2>
+      <div class="character-tools"><label for="character-filter">Show <select id="character-filter"><option value="all">All characters</option><option value="basic">Basic Latin letters</option><option value="latin">Extended Latin letters</option><option value="accent">Spacing accents</option><option value="mark">Combining marks</option><option value="number">Digits</option><option value="punctuation">Punctuation &amp; symbols</option><option value="greek">Greek capitals</option><option value="ligature">Ligatures</option></select></label><p id="character-count" role="status"></p></div>
+      <ul class="character-grid live-font" id="character-grid" aria-label="Supported characters"></ul>
+      <p class="small-note">Individual combining marks are shown on the letter a. This font does not include an OpenType MATH table.</p>
+      <noscript><p>Enable JavaScript to use the controls and character grid.</p></noscript>
+    </section>   
+  </main>
+</body>
+</html>
