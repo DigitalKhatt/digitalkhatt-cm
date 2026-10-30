@@ -7,10 +7,10 @@ button,input,select,textarea{font:inherit}
 button,input,select,textarea,a{outline-offset:3px}
 .wrap{max-width:1200px;margin:auto;padding:24px}
 header{margin-bottom:28px}
-.header-links{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;column-gap:24px}
-h1{margin:0 0 8px;font-size:28px}
-h2{margin:0 0 14px;font-size:20px}
-h3{margin:0 0 10px;font-size:15px}
+.header-links{font-size:20px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;column-gap:24px}
+h1{margin:0 0 12px;font-size:44px;line-height:1.2}
+h2{margin:0 0 18px;font-size:32px;line-height:1.2}
+h3{margin:0 0 12px;font-size:24px;line-height:1.2}
 p{margin:8px 0}
 section{margin-bottom:36px}
 .section-heading{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
@@ -46,4 +46,4 @@ select{padding:6px;background:#fff;border:1px solid #aaa;max-width:100%}
 .character-grid .codepoint{font-size:10px;line-height:1.4;color:#555}
 footer{padding-top:16px;border-top:1px solid #ddd;font-size:12px;color:#555}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(max-width:700px){.wrap{padding:18px}.controls{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.samples{grid-template-columns:1fr}.section-heading{align-items:flex-start}#font-status{max-width:120px;text-align:right;font-size:12px}h1{font-size:25px}#preview{height:360px}.character-tools{align-items:flex-start;flex-wrap:wrap}.character-tools label{flex-wrap:wrap}.character-tools p{white-space:nowrap;font-size:12px}.character-grid{grid-template-columns:repeat(auto-fill,minmax(62px,1fr))}.preview-footer{font-size:11px}.preset-bar{padding:12px}.presets{gap:5px}}
+@media(max-width:700px){.wrap{padding:18px}.controls{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.samples{grid-template-columns:1fr}.section-heading{align-items:flex-start}#font-status{max-width:120px;text-align:right;font-size:12px}h1{font-size:36px}h2{font-size:28px}h3{font-size:22px}#preview{height:360px}.character-tools{align-items:flex-start;flex-wrap:wrap}.character-tools label{flex-wrap:wrap}.character-tools p{white-space:nowrap;font-size:12px}.character-grid{grid-template-columns:repeat(auto-fill,minmax(62px,1fr))}.preview-footer{font-size:11px}.preset-bar{padding:12px}.presets{gap:5px}}
