@@ -115,7 +115,7 @@ design parameters, across sampled combinations of weight, width and slant:
 
 - **Letter shapes:** the largest outline-boundary difference was **9.9562 units
   per 1000 em**, within the **10-unit** target. Added glyphs are checked against
-  their CM-based constructions, including ð’s oval counter.
+  their CM-based constructions, including ð’s closed bowl.
 - **Text layout:** both versions were typeset in LuaLaTeX: traditional CM using
   its native TFM metrics, and DigitalKhatt CM TTF using LuaLaTeX's HarfBuzz
   renderer, without a compatibility package. Character widths, spaces, kerning,
@@ -129,13 +129,9 @@ design parameters, across sampled combinations of weight, width and slant:
 These tests cover sampled axis settings, not every possible combination or
 paragraph line breaking.
 
-Contextual European accent forms use comma-based marks
-in place of generic CM cedillas or carons and are excluded from the layout
-pass/fail comparison with those TeX accent macros:
-
-The three pairs below show the turned comma above **ģ**, comma below **ķ**, and
-side caron in **ď**. Each pair has CM with generic TeX accents on the left and
-DigitalKhatt CM on the right, using regular parameters and blacker 6.
+DigitalKhatt CM’s accents for **ģ**, **ķ** and **ď** differ from CM’s generic TeX
+accents and are excluded from the accent layout pass/fail checks. Each pair shows
+CM on the left and DigitalKhatt CM on the right, at regular settings with blacker 6.
 
 <img src="docs/images/accent-comparison.png" width="225" alt="Original CM generic TeX accents compared with DigitalKhatt CM contextual forms, at regular parameters and blacker 6">
 
