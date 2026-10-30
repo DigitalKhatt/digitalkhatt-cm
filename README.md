@@ -11,10 +11,12 @@ edit sample text, and browse supported characters.
 
 ![Weight, width and slant changes in DigitalKhatt CM Text](docs/font-axes.gif)
 
-This is a **text-only** release: 312 Unicode mappings, including basic Latin,
-selected accented Latin letters, combining marks, typographic punctuation,
-`ff fi fl ffi ffl` ligatures and selected Greek capitals. It has no OpenType
-MATH table.
+This **text-only** font covers printable **Latin-1** and **Windows-1252** characters,
+plus additional accented Latin letters, combining marks and ligatures.
+
+Missing characters, including `¤ € Ð ð Þ þ`, were added by reusing or adapting
+CM designs and support weight, width and slant.
+There is no OpenType MATH table.
 
 ## Variable axes
 
@@ -86,9 +88,7 @@ it is not a uniform expansion of the finished glyph.
 Install `fonts/DigitalKhattCMText-VF.ttf` in your operating system. Its family
 name is **DigitalKhatt CM Text**.
 
-For web use, host `fonts/DigitalKhattCMText-VF.woff2` and the license together.
-The WOFF2 is approximately **460 KB**, compared with **1.12 MB** for the TTF.
-It contains the same glyphs and all three variable axes. The demo in
+For web use, host `fonts/DigitalKhattCMText-VF.woff2`. It contains the same glyphs and all three variable axes. The demo in
 [`docs/`](docs/index.html) uses this web font.
 
 ```css
@@ -114,18 +114,22 @@ The finished font was compared with Computer Modern generated using the same
 design parameters, across sampled combinations of weight, width and slant:
 
 - **Letter shapes:** the largest outline-boundary difference was **9.9562 units
-  per 1000 em**, within the **10-unit** target.
+  per 1000 em**, within the **10-unit** target. Added glyphs are checked against
+  their CM-based constructions, including ð’s oval counter.
 - **Text layout:** both versions were typeset in LuaLaTeX: traditional CM using
   its native TFM metrics, and DigitalKhatt CM TTF using LuaLaTeX's HarfBuzz
   renderer, without a compatibility package. Character widths, spaces, kerning,
   ligatures and accent placement were checked; the largest glyph-position
-  difference was **4.2374 units per 1000 em**.
+  difference was **4.2374 units per 1000 em** for Latin text and accents.
+  Added glyph widths and Icelandic kerning and mark placement are checked separately.
 - **Stacked accents:** accent pairs, repeated marks and selected triple stacks
   were compared with an explicit recursive TeX-box construction. The largest
   position difference was **0.8331 units per 1000 em**.
 
 These tests cover sampled axis settings, not every possible combination or
-paragraph line breaking. Contextual European accent forms use comma-based marks
+paragraph line breaking.
+
+Contextual European accent forms use comma-based marks
 in place of generic CM cedillas or carons and are excluded from the layout
 pass/fail comparison with those TeX accent macros:
 
