@@ -1,7 +1,7 @@
 @font-face{font-family:DKCM;src:url("fonts/DigitalKhattCMText-VF.woff2?v=730844b2b9c4") format("woff2");font-weight:200 750;font-stretch:80% 125%;font-style:normal;font-display:swap}
 :root{--weight:400;--width:100;--slant:0;--size:43px;--liga:1;color-scheme:light}
 *{box-sizing:border-box}
-body{margin:0;background:#fff;color:#222;font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+body{margin:0;background:#fff;color:#222;font:15px/1.5 DKCM,serif;font-synthesis:none}
 a{color:#185bb0;text-underline-offset:3px}
 button,input,select,textarea{font:inherit}
 button,input,select,textarea,a{outline-offset:3px}
@@ -43,7 +43,7 @@ select{padding:6px;background:#fff;border:1px solid #aaa;max-width:100%}
 .character-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(74px,1fr));list-style:none;margin:0 0 12px;padding:0;border-top:1px solid #ddd;border-left:1px solid #ddd}
 .character-grid li{min-width:0;min-height:90px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:10px 3px;border-right:1px solid #ddd;border-bottom:1px solid #ddd}
 .character-grid .character{font-size:32px;line-height:1.3;white-space:pre;min-height:42px}
-.character-grid .codepoint{font:10px/1.4 system-ui,sans-serif;color:#555}
+.character-grid .codepoint{font-size:10px;line-height:1.4;color:#555}
 footer{padding-top:16px;border-top:1px solid #ddd;font-size:12px;color:#555}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:700px){.wrap{padding:18px}.controls{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.samples{grid-template-columns:1fr}.section-heading{align-items:flex-start}#font-status{max-width:120px;text-align:right;font-size:12px}h1{font-size:25px}#preview{height:360px}.character-tools{align-items:flex-start;flex-wrap:wrap}.character-tools label{flex-wrap:wrap}.character-tools p{white-space:nowrap;font-size:12px}.character-grid{grid-template-columns:repeat(auto-fill,minmax(62px,1fr))}.preview-footer{font-size:11px}.preset-bar{padding:12px}.presets{gap:5px}}
