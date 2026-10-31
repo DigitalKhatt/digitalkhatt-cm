@@ -38,8 +38,8 @@ Slant retains Roman letterforms; it does not select a separately designed italic
    are retained as original cubics or fitted by least squares. Native paint
    pieces retain their overlaps for compatible variation.
 3. **Build compatible variation.** Corresponding curves share points across
-   glyph-local master grids. Adaptive sampling and bounded curve merging reduce
-   storage while checking the original CM geometry.
+   glyph-local master grids. Adaptive sampling, master pruning and bounded curve
+   merging reduce storage while checking the original CM geometry.
 4. **Convert jointly to TrueType.** FontTools converts corresponding cubic
    masters together into compatible quadratic `glyf`/`gvar` outlines. Where
    integer rounding needs extra precision, ordinary scaled TrueType components

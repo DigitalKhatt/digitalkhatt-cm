@@ -1,4 +1,4 @@
-@font-face{font-family:DKCM;src:url("fonts/DigitalKhattCMText-VF.woff2?v=730844b2b9c4") format("woff2");font-weight:200 750;font-stretch:80% 125%;font-style:normal;font-display:swap}
+@font-face{font-family:DKCM;src:url("fonts/DigitalKhattCMText-VF.woff2?v=bdd144a7b90a") format("woff2");font-weight:200 750;font-stretch:80% 125%;font-style:normal;font-display:swap}
 :root{--weight:400;--width:100;--slant:0;--size:43px;--liga:1;color-scheme:light}
 *{box-sizing:border-box}
 body{margin:0;background:#fff;color:#222;font:15px/1.5 DKCM,serif;font-synthesis:none}
